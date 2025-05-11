@@ -34,12 +34,17 @@ async function showHoroscope() {
   }
 
   renderHoroscope(data);
+  
+  // Iniciar fade-out después de 15 segundos
   hideTimeout = setTimeout(fadeOut, 15000);
+  
+  // Limpiar y reactivar botón después de la animación
   setTimeout(() => {
     clearView();
     enableButton();
-  }, 16000);
+  }, 15500);
 }
 
+// Configurar validación de fecha y evento del botón
 setupDateValidation(updateBirthdate);
 document.getElementById("get-quote").addEventListener("click", showHoroscope);
