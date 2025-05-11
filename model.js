@@ -1,4 +1,4 @@
-const API_URL = "https://tu-api-horoscopo.vercel.app/api/horoscope";
+const API_URL = "https://horoscope-api-coral.vercel.app/api/horoscope";
 const CORS_PROXY = "https://corsproxy.io/?";
 
 const ZODIAC_SIGNS = {
