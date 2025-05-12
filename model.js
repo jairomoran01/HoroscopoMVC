@@ -1,5 +1,4 @@
 const API_URL = "https://horoscope-api-coral.vercel.app/api/horoscope";
-const CORS_PROXY = "https://corsproxy.io/?";
 
 const ZODIAC_SIGNS = {
   'aries': '♈',
@@ -40,7 +39,7 @@ export async function fetchHoroscope(birthdate) {
     const sign = getZodiacSign(date);
     const emoji = ZODIAC_SIGNS[sign];
     
-    const url = `${CORS_PROXY}${API_URL}?sign=${sign}`;
+    const url = `${API_URL}?sign=${sign}`; // Eliminado CORS_PROXY
     const response = await fetch(url, {
       mode: "cors",
       cache: "no-store",
